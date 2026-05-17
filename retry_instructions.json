@@ -1,0 +1,41 @@
+[
+  {
+    "task_id": "TS-001",
+    "retry_needed": true,
+    "improved_prompt": "Summarise the update for a customer in under 40 words: We have a delay in withdrawals due to a third-party outage. No funds are lost. Processing will resume within 12 hours.",
+    "expected_improvements": [
+      "avoids inventing facts",
+      "reassures no funds are lost",
+      "stays under 40 words"
+    ],
+    "notes": "Model output introduced incorrect information and failed to reassure the customer."
+  },
+  {
+    "task_id": "TS-002",
+    "retry_needed": false,
+    "improved_prompt": "",
+    "expected_improvements": [],
+    "notes": ""
+  },
+  {
+    "task_id": "TS-003",
+    "retry_needed": true,
+    "improved_prompt": "What is the typical processing time for verification and what factors affect approval?",
+    "expected_improvements": [
+      "avoids guaranteeing outcome",
+      "sets realistic expectation"
+    ],
+    "notes": "Model output may lead to unrealistic expectations"
+  },
+  {
+    "task_id": "TS-004",
+    "retry_needed": true,
+    "improved_prompt": "Rewrite this to sound professional and empathetic without blaming the customer or their bank: The issue seems to be with the bank's processing.",
+    "expected_improvements": [
+      "avoids blaming language",
+      "preserves core meaning",
+      "stays concise"
+    ],
+    "notes": "Model output was close but still implied the bank's issue was the main problem."
+  }
+]

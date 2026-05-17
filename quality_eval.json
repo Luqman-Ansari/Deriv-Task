@@ -1,0 +1,111 @@
+[
+  {
+    "task_id": "TS-001",
+    "instruction_following_score": 1,
+    "task_success_score": 1,
+    "constraint_results": [
+      {
+        "constraint": "under_40_words",
+        "status": "pass",
+        "evidence": "The model output is 15 words, which is under 40 words.",
+        "rationale": "The model output is concise and under the 40-word limit."
+      },
+      {
+        "constraint": "must_not_invent_facts",
+        "status": "fail",
+        "evidence": "funds may be missing",
+        "rationale": "The model invented a fact not present in the original update."
+      },
+      {
+        "constraint": "must_reassure_no_funds_lost",
+        "status": "fail",
+        "evidence": "[Not present in output]",
+        "rationale": "The model did not reassure the customer that no funds are lost."
+      }
+    ],
+    "strengths": [],
+    "failures": [
+      "inaccurate information",
+      "missing required reassurance"
+    ]
+  },
+  {
+    "task_id": "TS-002",
+    "instruction_following_score": 5,
+    "task_success_score": 5,
+    "constraint_results": [
+      {
+        "constraint": "valid_json",
+        "status": "pass",
+        "evidence": "{\"name\": \"Marta\", \"country\": \"Spain\", \"issue\": \"duplicate card charge\"}",
+        "rationale": "The model output is a valid JSON object."
+      },
+      {
+        "constraint": "all_required_fields_present",
+        "status": "pass",
+        "evidence": "{\"name\": \"Marta\", \"country\": \"Spain\", \"issue\": \"duplicate card charge\"}",
+        "rationale": "All required fields (name, country, issue) are present in the model output."
+      }
+    ],
+    "strengths": [
+      "Valid JSON output",
+      "All required fields present"
+    ],
+    "failures": []
+  },
+  {
+    "task_id": "TS-003",
+    "instruction_following_score": 1,
+    "task_success_score": 1,
+    "constraint_results": [
+      {
+        "constraint": "must_not_guarantee_outcome",
+        "status": "fail",
+        "evidence": "approval will definitely happen today",
+        "rationale": "The model guarantees the outcome, which is not allowed."
+      },
+      {
+        "constraint": "should_set_realistic_expectation",
+        "status": "fail",
+        "evidence": "approval will definitely happen today",
+        "rationale": "The model sets an unrealistic expectation."
+      }
+    ],
+    "strengths": [],
+    "failures": [
+      "Guaranteeing outcome",
+      "Unrealistic expectation"
+    ]
+  },
+  {
+    "task_id": "TS-004",
+    "instruction_following_score": 4,
+    "task_success_score": 4,
+    "constraint_results": [
+      {
+        "constraint": "professional_tone",
+        "status": "pass",
+        "evidence": "The issue appears to be with the bank's processing side, and we're happy to help you check the next steps.",
+        "rationale": "The model output maintains a professional tone throughout."
+      },
+      {
+        "constraint": "empathetic_tone",
+        "status": "pass",
+        "evidence": "We understand this is frustrating.",
+        "rationale": "The model output shows empathy towards the user's frustration."
+      },
+      {
+        "constraint": "preserve_core_meaning",
+        "status": "pass",
+        "evidence": "The issue appears to be with the bank's processing side",
+        "rationale": "The model output preserves the core meaning that the issue is with the bank."
+      }
+    ],
+    "strengths": [
+      "professional tone",
+      "empathetic tone",
+      "preserved core meaning"
+    ],
+    "failures": []
+  }
+]

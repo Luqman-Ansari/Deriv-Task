@@ -1,0 +1,34 @@
+[
+  {
+    "task_id": "TS-001",
+    "instruction_following_score": 1,
+    "task_success_score": 1,
+    "violation_count": 3,
+    "highest_violation_severity": "high",
+    "final_verdict": "fail"
+  },
+  {
+    "task_id": "TS-002",
+    "instruction_following_score": 5,
+    "task_success_score": 5,
+    "violation_count": 0,
+    "highest_violation_severity": "none",
+    "final_verdict": "pass"
+  },
+  {
+    "task_id": "TS-003",
+    "instruction_following_score": 1,
+    "task_success_score": 1,
+    "violation_count": 1,
+    "highest_violation_severity": "high",
+    "final_verdict": "fail"
+  },
+  {
+    "task_id": "TS-004",
+    "instruction_following_score": 4,
+    "task_success_score": 4,
+    "violation_count": 0,
+    "highest_violation_severity": "none",
+    "final_verdict": "pass"
+  }
+]

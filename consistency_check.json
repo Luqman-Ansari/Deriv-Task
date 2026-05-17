@@ -1,0 +1,20 @@
+[
+  {
+    "task_ids": [
+      "TS-001",
+      "TS-003"
+    ],
+    "issue": "contradictory_constraint",
+    "why_inconsistent": "Tasks with similar low scores have different constraint failure reasons.",
+    "suggested_recheck": "Verify if constraint failure reasons are correctly matched to task outputs."
+  },
+  {
+    "task_ids": [
+      "TS-001",
+      "TS-002"
+    ],
+    "issue": "score_mismatch",
+    "why_inconsistent": "Tasks with different scores have different output qualities.",
+    "suggested_recheck": "Check if scores accurately reflect output quality differences."
+  }
+]

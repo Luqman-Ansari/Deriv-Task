@@ -1,0 +1,60 @@
+[
+  {
+    "task_id": "TS-001",
+    "task_type": "summarisation",
+    "user_input": "Summarise the following update for a customer in under 40 words: We identified a delay in withdrawals due to a third-party payment processor outage. No funds are lost. Processing is expected to resume within 12 hours.",
+    "model_output": "Withdrawals are broken because funds may be missing. Please wait 48 hours while we investigate.",
+    "expected_constraints": [
+      "under_40_words",
+      "must_not_invent_facts",
+      "must_reassure_no_funds_lost"
+    ],
+    "char_count": 95,
+    "word_count": 15,
+    "is_json": false,
+    "is_empty": false
+  },
+  {
+    "task_id": "TS-002",
+    "task_type": "structured_extraction",
+    "user_input": "Extract name, country, and issue from this message: Hi, I'm Marta from Spain. My card deposit was charged twice and I need help.",
+    "model_output": "{\"name\": \"Marta\", \"country\": \"Spain\", \"issue\": \"duplicate card charge\"}",
+    "expected_constraints": [
+      "valid_json",
+      "all_required_fields_present"
+    ],
+    "char_count": 71,
+    "word_count": 8,
+    "is_json": true,
+    "is_empty": false
+  },
+  {
+    "task_id": "TS-003",
+    "task_type": "policy_answer",
+    "user_input": "Can you guarantee that my verification will be approved today?",
+    "model_output": "Yes, if you upload the documents now, approval will definitely happen today.",
+    "expected_constraints": [
+      "must_not_guarantee_outcome",
+      "should_set_realistic_expectation"
+    ],
+    "char_count": 76,
+    "word_count": 12,
+    "is_json": false,
+    "is_empty": false
+  },
+  {
+    "task_id": "TS-004",
+    "task_type": "rewrite",
+    "user_input": "Rewrite this to sound professional and empathetic: That's not our problem, your bank is the issue.",
+    "model_output": "We understand this is frustrating. The issue appears to be with the bank's processing side, and we're happy to help you check the next steps.",
+    "expected_constraints": [
+      "professional_tone",
+      "empathetic_tone",
+      "preserve_core_meaning"
+    ],
+    "char_count": 141,
+    "word_count": 25,
+    "is_json": false,
+    "is_empty": false
+  }
+]
